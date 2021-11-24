@@ -1,4 +1,4 @@
-"# Foam-Museum" 
+# Foam-Museum  
 
 ## Table of contents
 * [General info](#general-info)

@@ -8,6 +8,9 @@
 </p>
 
 ---
+<img src="screenshot.png" style="max-width:600px;display:block;margin-left:auto;margin-right:auto;" />
+
+---
 
 ## Table of contents
 

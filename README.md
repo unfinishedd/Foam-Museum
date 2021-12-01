@@ -8,7 +8,7 @@
 </p>
 
 ---
-<img src="screenshot.png" style="max-width:600px;display:block;margin-left:auto;margin-right:auto;" />
+<img src="screenshot.png" style="max-width:500px;display:block;margin-left:auto;margin-right:auto;" />
 
 ---
 

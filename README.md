@@ -50,14 +50,14 @@ List the ready features here:
 ## Project Status
 
 Project is: _in progress_. \
-[![Website](https://img.shields.io/badge/-Website-2e343f?logo=google&logoColor=white&style=for-the-badge)](https://kaansecen.nl/wordpress/foam)
-\ [![Trello](https://img.shields.io/badge/-trello-2e343f?logo=Trello&logoColor=white&style=for-the-badge)](https://trello.com/b/fozAhvke/foam-e-commerce)
+[![Website](https://img.shields.io/badge/-Website-2e343f?logo=google&logoColor=white&style=for-the-badge)](https://kaansecen.nl/wordpress/foam) \
+[![Trello](https://img.shields.io/badge/-trello-2e343f?logo=Trello&logoColor=white&style=for-the-badge)](https://trello.com/b/fozAhvke/foam-e-commerce)
 
 ---
 
 ## Contact
 
-Created by [@unfinished](https://www.unfinishedd.nl)
+Created by [@unfinished](https://www.unfinishedd.nl) \
 Created by [@kaansecen](https://www.kaansecen.nl)
 
 ---

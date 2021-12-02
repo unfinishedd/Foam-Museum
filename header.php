@@ -12,7 +12,14 @@
 <body <?php body_class(); ?>>
     <nav class="flex flex-row bg-gray-800 p-2 md:max-w-md lg:max-w-lg md:mx-auto max-w-sm mx-auto">
         <div class="flex-none" style="color: #fff;"><i class="fal fa-bars fa-lg"></i></div>
-        <div class="flex-grow text-center"><img src="images/logo-foam.svg" alt=""></div>
+        <img class="custom-logo" src="<?php if (function_exists('the_custom_logo')) {
+                                            the_custom_logo();
+                                        } ?>" />
+        <?php
+            if ( function_exists( 'the_custom_logo' ) ) {
+                the_custom_logo();
+            }
+        ?>
         <div class="flex-none" style="color: #fff;"><i class="fal fa-search fa-md"></i></div>
     </nav>
     <?php wp_nav_menu(array('theme_location' => 'Hoofdmenu', 'menu_class' => 'flex-row-reverse')); ?>

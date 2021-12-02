@@ -1,37 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php get_header(); ?>
+<h1 class="p-5">Test Homepage</h1>
+<?php
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Foam - Museum</title>
-</head>
+if (have_posts()) :
+    while (have_posts()) : the_post(); ?>
 
-<body>
-    <h1>Test Homepage</h1>
-    <?php
+        <h2 class="underline"><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h2>
+        <?php the_content() ?>
+        <a href="<?php the_permalink() ?>">Lees Meer</a>
+        <hr>
 
-    get_header();
+<?php endwhile;
 
-    if (have_posts()) :
-        while (have_posts()) : the_post(); ?>
+else :
+    echo '<p>There are no posts!</p>';
 
-            <h2><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h2>
-            <?php the_content() ?>
+endif;
+get_footer();
 
-    <?php endwhile;
-
-    else :
-        echo '<p>There are no posts!</p>';
-
-    endif;
-
-    get_footer();
-
-    ?>
-
-
-</body>
-
-</html>
+?>
+<?php get_footer(); ?>

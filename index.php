@@ -1,5 +1,15 @@
 <?php get_header(); ?>
-<h1 class="p-5">Test Homepage</h1>
+
+
+<!-- the body -->
+<section class="">
+
+    <h1>daddy</h1>
+
+</section>
+
+
+<!-- dit is een test -->
 <?php
 
 if (have_posts()) :

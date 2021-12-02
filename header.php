@@ -11,17 +11,8 @@
 
 <body <?php body_class(); ?>>
     <nav class="flex flex-row bg-gray-800 p-2 md:max-w-md lg:max-w-lg md:mx-auto max-w-sm mx-auto">
-        <div style="color: #fff;"><i class="fal fa-bars fa-lg"></i></div>
-        <div>Foam Logo</div>
-        <div style="color: #fff;"><i class="fal fa-search fa-md"></i></div>
+        <div class="flex-none" style="color: #fff;"><i class="fal fa-bars fa-lg"></i></div>
+        <div class="flex-grow text-center"><img src="images/logo-foam.svg" alt=""></div>
+        <div class="flex-none" style="color: #fff;"><i class="fal fa-search fa-md"></i></div>
     </nav>
-    <div class="mx-auto">
-        <div>HIHI</div>
-        <div>GFGFFG</div>
-        <div>GFGFFG</div>
-    </div>
     <?php wp_nav_menu(array('theme_location' => 'Hoofdmenu', 'menu_class' => 'flex-row-reverse')); ?>
-
-
-
-    

@@ -2,10 +2,13 @@
 
 
 <!-- the body -->
-<section class="">
-
-    <h1>daddy</h1>
-
+<section class="bg-yellow-400">
+    <div class="container mx-auto">
+    <?php if (has_post_thumbnail()): ?>
+            <img class="img-small" src="<?php the_post_thumbnail_url('smallest'); ?>"/>
+        <?php endif ?>
+        <h1>daddy foam</h1>
+    </div>
 </section>
 
 

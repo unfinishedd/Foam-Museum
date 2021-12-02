@@ -26,4 +26,8 @@ function foam_custom_logo() {
     add_theme_support( 'custom-logo', $defaults );
 }
 
+	
+add_theme_support( 'post-thumbnails' );
+add_image_size( 'smallest', 300, 300, true );
+
 add_action( 'after_setup_theme', 'foam_custom_logo' );

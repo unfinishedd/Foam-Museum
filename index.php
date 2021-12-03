@@ -6,6 +6,11 @@
     <div class="container mx-auto">
     <?php if (has_post_thumbnail()): ?>
             <img class="img-small" src="<?php the_post_thumbnail_url('smallest'); ?>"/>
+            <p>
+                <?php 
+                    the_post_thumbnail_url('smallest');
+                ?>
+            </p>
         <?php endif ?>
         <h1>daddy foam x600px yes </h1>
     </div>

@@ -13,7 +13,7 @@ function foam_init_theme() {
 
 add_action('init', 'foam_init_theme');
 
-function foam_custom_logo() {
+function theme_custom_logo() {
     $defaults = array(
         'height'               => 100,
         'width'                => 400,
@@ -30,4 +30,4 @@ function foam_custom_logo() {
 add_theme_support( 'post-thumbnails' );
 add_image_size( 'smallest', 300, 300, true );
 
-add_action( 'after_setup_theme', 'foam_custom_logo' );
+add_action( 'after_setup_theme', 'theme_custom_logo' );

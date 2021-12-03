@@ -1,32 +1,29 @@
 <?php get_header(); ?>
 
-
-<!-- the body -->
-<section class="bg-yellow-400">
-    <div class="container mx-auto">
-    <?php if (has_post_thumbnail()): ?>
-            <img class="img-small" src="<?php the_post_thumbnail_url('smallest'); ?>"/>
-            <p>
-                <?php 
-                    the_post_thumbnail_url('smallest');
-                ?>
-            </p>
-        <?php endif ?>
-        <h1>daddy foam x600px yes </h1>
-    </div>
-</section>
-
-
 <!-- dit is een test -->
 <?php
 
 if (have_posts()) :
     while (have_posts()) : the_post(); ?>
 
-        <h2 class="underline"><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h2>
-        <?php the_content() ?>
-        <a href="<?php the_permalink() ?>">Lees Meer</a>
-        <hr>
+        <!-- the body -->
+        <section class="bg-yellow-400">
+            <div class="container mx-auto">
+                <?php if (has_post_thumbnail()) : ?>
+                    <figure class="w-full flex justify-end">
+                        <img class="img-small" src="<?php the_post_thumbnail_url('smallest'); ?>" />
+                    </figure>
+                <?php endif ?>
+                <h2 class="underline"><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h2>
+                <?php the_content() ?>
+                <a href="<?php the_permalink() ?>">Lees Meer</a>
+                <hr>
+            </div>
+        </section>
+
+
+
+
 
 <?php endwhile;
 

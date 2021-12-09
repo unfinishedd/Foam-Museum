@@ -15,7 +15,7 @@ if (have_posts()) :
                             <img class="img-small text-white" src="<?php the_post_thumbnail_url('smallest'); ?>" />
                         </figure>
                     <?php endif ?>
-                    <h2 class="underline text-white"><?php the_title() ?></h2>
+                    <h2 class="text-white"><?php the_title() ?></h2>
                     <?php the_content() ?>
                     <hr>
                 </div>

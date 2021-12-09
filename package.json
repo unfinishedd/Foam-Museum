@@ -1,0 +1,22 @@
+{
+  "name": "foam-theme",
+  "version": "1.0.0",
+  "description": "</br>",
+  "main": "index.js",
+  "scripts": {
+    "dev": "sass --style expanded scss/main-theme.scss css/main-theme.css",
+    "watch": " sass --watch scss:css --style expanded",
+    "prod": "sass --style compressed --sourcemap=none scss/main-theme.scss css/main-theme.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/unfinishedd/Foam-Museum.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/unfinishedd/Foam-Museum/issues"
+  },
+  "homepage": "https://github.com/unfinishedd/Foam-Museum#readme"
+}

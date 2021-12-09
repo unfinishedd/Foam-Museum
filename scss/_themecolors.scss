@@ -1,0 +1,37 @@
+// Theme Colors
+$primary-0: #000000;
+$primary-100: #ffffff;
+$primary-200: #d12d26;
+$primary-300: #f5cb45;
+
+$secondary-0: #da612b;
+$secondary-100: #a0c043;
+$secondary-200: #ac8b73;
+$secondary-300: #e6e6e6;
+
+$colors-primary: ("0": $primary-0, "100": $primary-100, "200": $primary-200, "300": $primary-300);
+$colors-secondary: ("0": $secondary-0, "100": $secondary-100, "200": $secondary-200, "300": $secondary-300);
+
+@each $name, $glyph in $colors-primary {
+  .bg-primary-#{$name} {
+    background-color: $glyph;
+  }
+}
+
+@each $name, $glyph in $colors-secondary {
+  .bg-secondary-#{$name} {
+    background-color: $glyph;
+  }
+}
+
+@each $name, $glyph in $colors-primary {
+  .color-primary-#{$name} {
+    color: $glyph;
+  }
+}
+
+@each $name, $glyph in $colors-secondary {
+  .color-secondary-#{$name} {
+    color: $glyph;
+  }
+}

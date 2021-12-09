@@ -1,4 +1,4 @@
-.bg-primary {
+.bg-primary-0 {
   background-color: #000000;
 }
 
@@ -14,7 +14,7 @@
   background-color: #f5cb45;
 }
 
-.bg-secondary {
+.bg-secondary-0 {
   background-color: #da612b;
 }
 
@@ -22,11 +22,15 @@
   background-color: #a0c043;
 }
 
+.bg-secondary-200 {
+  background-color: #ac8b73;
+}
+
 .bg-secondary-300 {
   background-color: #e6e6e6;
 }
 
-.color-primary {
+.color-primary-0 {
   color: #000000;
 }
 
@@ -42,7 +46,7 @@
   color: #f5cb45;
 }
 
-.color-secondary {
+.color-secondary-0 {
   color: #da612b;
 }
 
@@ -54,7 +58,7 @@
   color: #ac8b73;
 }
 
-.color-secondary {
+.color-secondary-300 {
   color: #e6e6e6;
 }
 

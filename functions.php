@@ -1,5 +1,5 @@
 <?php
-
+require __DIR__ . '/includes/CustomMenuWalker.php';
 
 function foam_theme_assets()
 {
@@ -10,28 +10,29 @@ function foam_theme_assets()
 
 add_action('wp_enqueue_scripts', 'foam_theme_assets');
 
-function foam_init_theme() {
+function foam_init_theme()
+{
     register_nav_menu('main-menu',  __('Hoofdmenu'));
     register_nav_menu('sub-menu',  __('Sub-Menu'));
 }
 
 add_action('init', 'foam_init_theme');
 
-function theme_custom_logo() {
+function theme_custom_logo()
+{
     $defaults = array(
         'height'               => 100,
         'width'                => 400,
         'flex-height'          => true,
         'flex-width'           => true,
-        'header-text'          => array( 'site-title', 'site-description' ),
-        'unlink-homepage-logo' => true, 
+        'header-text'          => array('site-title', 'site-description'),
+        'unlink-homepage-logo' => true,
     );
- 
-    add_theme_support( 'custom-logo', $defaults );
+
+    add_theme_support('custom-logo', $defaults);
 }
 
-	
-add_theme_support( 'post-thumbnails' );
-add_image_size( 'smallest', 300, 300, true );
+add_theme_support('post-thumbnails');
+add_image_size('smallest', 300, 300, true);
 
-add_action( 'after_setup_theme', 'theme_custom_logo' );
+add_action('after_setup_theme', 'theme_custom_logo');

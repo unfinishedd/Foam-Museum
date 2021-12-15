@@ -103,50 +103,36 @@
   font-style: italic;
 }
 
-.font-primary {
-  font-family: "Monument Grotesk";
+$font-family-primary: "Monument Grotesk";
+$font-family-secondary: "Monument Grotesk Mono";
+$font-family-secondary-100: "Monument Grotesk Semi-Mono";
+
+$fontnames: 
+  "normal" $font-family-primary normal normal,
+  "italic" $font-family-primary normal italic,
+  "medium" $font-family-primary 500 normal,
+  "medium-italic" $font-family-primary 500 italic,
+  "bold" $font-family-primary bold normal,
+  "bold-italic" $font-family-primary bold italic,
+  "mono" $font-family-secondary normal normal,
+  "mono-semi" $font-family-secondary-100 600 normal;
+
+@each $name, $font-family, $weight, $style in $fontnames {
+  .font-primary-#{$name} {
+    font-family: $font-family-primary;
+    font-weight: $weight;
+    font-style: $style;
+  }
+}
+
+.menu-change-font {
+  font-family: $font-family-primary;
   font-weight: normal;
   font-style: normal;
 }
 
-.font-primary-italic {
-  font-family: "Monument Grotesk";
+.menu-change-font:hover {
+  font-family: $font-family-primary;
   font-weight: normal;
   font-style: italic;
-}
-
-.font-primary-medium {
-  font-family: "Monument Grotesk";
-  font-weight: 500;
-  font-style: normal;
-}
-
-.font-primary-medium-italic {
-  font-family: "Monument Grotesk";
-  font-weight: 500;
-  font-style: italic;
-}
-
-.font-primary-bold {
-  font-family: "Monument Grotesk";
-  font-weight: bold;
-  font-style: normal;
-}
-
-.font-primary-bold-italic {
-  font-family: "Monument Grotesk";
-  font-weight: bold;
-  font-style: italic;
-}
-
-.font-primary-mono {
-  font-family: "Monument Grotesk Mono";
-  font-weight: normal;
-  font-style: normal;
-}
-
-.font-primary-mono-semi {
-  font-family: "Monument Grotesk Semi-Mono";
-  font-weight: 600;
-  font-style: normal;
 }

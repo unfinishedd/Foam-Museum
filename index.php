@@ -7,7 +7,7 @@ if (have_posts()) :
     while (have_posts()) : the_post(); ?>
 
         <!-- the body -->
-        <a href="<?php the_permalink() ?>">Lees Meer
+        <a href="<?php the_permalink() ?>">
             <section class="bg-primary text-white">
                 <div class="container mx-auto text-white">
                     <?php if (has_post_thumbnail()) : ?>

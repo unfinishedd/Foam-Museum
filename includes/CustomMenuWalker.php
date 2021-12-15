@@ -7,10 +7,10 @@ class CustomMenuWalker extends Walker_Nav_Menu
 
     {
         $this->item_number++;
-        $output .= '<a href="' . $item->url . '" class="flex justify-center font-primary w-2/6 bg-primary color-primary-100 border-gray-500 border py-2.5 hover:border-white">';
+        $output .= '<a href="' . $item->url . '" class="flex justify-center font-primary-normal w-2/6 bg-primary color-primary-100 border-gray-500 border py-2.5 hover:border-white">';
 
         if ($item->url && $item->url != '#') {
-            $output .= "<div class='" .  implode("", $item->classes) . "'>";
+            $output .= '<div class="lg:text-sm sm:text-lg">';
         } else {
             $output .= '<span>';
         }

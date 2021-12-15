@@ -12,9 +12,11 @@ $secondary-300: #e6e6e6;
 $colors-primary: ("0": $primary-0, "100": $primary-100, "200": $primary-200, "300": $primary-300);
 $colors-secondary: ("0": $secondary-0, "100": $secondary-100, "200": $secondary-200, "300": $secondary-300);
 
+
 @each $name, $glyph in $colors-primary {
   .bg-primary-#{$name} {
     background-color: $glyph;
+    color: $glyph;
   }
 }
 
@@ -35,3 +37,4 @@ $colors-secondary: ("0": $secondary-0, "100": $secondary-100, "200": $secondary-
     color: $glyph;
   }
 }
+

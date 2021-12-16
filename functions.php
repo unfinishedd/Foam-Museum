@@ -1,5 +1,7 @@
 <?php
 require __DIR__ . '/includes/CustomMenuWalker.php';
+require get_stylesheet_directory() . '/includes/preloader-customizer.php';
+new Preloader_Customizer();
 
 // Customizer Settings
 require get_stylesheet_directory() . '/includes/theminimalist-customizer.php';

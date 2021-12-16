@@ -6,12 +6,45 @@
     <title><?php bloginfo('name'); ?></title>
     <?php wp_head() ?>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body <?php body_class('bg-primary-0'); ?>>
-    <div class="h-screen w-full flex flex-col justify-center absolute z-40 bg-primary-0" id="loadingDiv">
+    <?php if (get_theme_mod('basic-preloader-callout-display') == 'Yes') { ?>
+        <div class="h-screen w-full flex flex-col justify-center absolute z-40 bg-primary-0" id="loadingDiv">
+            <div class="relative mx-auto sm:text-6xl lg:text-5xl" id="textDiv">
+                <?php
+                $Text_1 = get_theme_mod('basic-preloader-callout-text');
+                $Text_2 = get_theme_mod('basic-preloader-callout-text-2');
+                $Text_3 = get_theme_mod('basic-preloader-callout-text-3');
+                $Text_4 = get_theme_mod('basic-preloader-callout-text-4');
+                $Text_5 = get_theme_mod('basic-preloader-callout-text-5');
+                
+
+                echo $Text_2;
+                if ($Text_1 != '') {
+                    echo "<i class='font-primary-normal opacity-0 color-primary-100' id='photography'>" . $Text_1 . "</i> ";
+                    if ($Text_2 != '') {
+                        echo "<i class='font-primary-normal opacity-0 color-primary-100' id='learn'>" . $Text_2 . "</i> ";
+                    }
+                    if ($Text_3 != '') {
+                        echo "<i class='font-primary-normal opacity-0 color-primary-100' id='all'>" . $Text_3 . "</i> ";
+                    }
+                    if ($Text_4 != '') {
+                        echo "<i class='font-primary-normal opacity-0 color-primary-100' id='about'>" . $Text_4 . "</i> ";
+                    }
+                    if ($Text_5 != '') {
+                        echo "<i class='font-primary-normal opacity-0 color-primary-100' id='it'>" . $Text_5 . "</i> ";
+                    }
+                } else {
+                    echo "Edit this by going to your Dashboard -> Appearance -> Customise -> Preloader Editor";
+                }
+                ?>
+            </div>
+        </div>
+    <?php } ?>
+    <!-- <div class="h-screen w-full flex flex-col justify-center absolute z-40 bg-primary-0" id="loadingDiv">
         <div class="relative mx-auto sm:text-6xl lg:text-5xl" id="textDiv">
             <i class="font-primary-normal opacity-0 color-primary-100" id="photography">photography,</i>
             <i class="font-primary-normal opacity-0 color-primary-100" id="learn">learn</i>
@@ -19,7 +52,7 @@
             <i class="font-primary-normal opacity-0 color-primary-100" id="about">about</i>
             <i class="font-primary-normal opacity-0 color-primary-100" id="it">it</i>
         </div>
-    </div>
+    </div> -->
     <div class="sticky top-0">
         <nav class="bg-primary-200 lg:h-fit p-2 lg:max-w-lg lg:mx-auto max-w-full py-3 mx-4 mt-4 lg:mt-0" id="main-menu">
             <div class="flex flex-row">
@@ -43,16 +76,32 @@
                     <div class="border rounded-full hover:rounded-none my-4 px-4 py-1 text-sm font-primary-normal color-primary-100">open vandaag 10:00-17:00</div>
                 </div>
                 <nav class="mx-6 py-12">
-                    <a><div class="color-primary-100 my-4"><span class="menu-change-font text-4xl">programma</span><i class="fal fa-info-circle fa-lg p-1 ml-1"></i></div></a>
-                    <a><div class="color-primary-100 my-4"><span class="menu-change-font text-4xl">tebjdsfudius</span><i class="fal fa-info-circle fa-lg p-1 ml-1"></i></div></a>
-                    <a><div class="color-primary-100 my-4"><span class="menu-change-font text-4xl">jkdjkdkj</span><i class="fal fa-info-circle fa-lg p-1 ml-1"></i></div></a>
+                    <a>
+                        <div class="color-primary-100 my-4"><span class="menu-change-font text-4xl">programma</span><i class="fal fa-info-circle fa-lg p-1 ml-1"></i></div>
+                    </a>
+                    <a>
+                        <div class="color-primary-100 my-4"><span class="menu-change-font text-4xl">tebjdsfudius</span><i class="fal fa-info-circle fa-lg p-1 ml-1"></i></div>
+                    </a>
+                    <a>
+                        <div class="color-primary-100 my-4"><span class="menu-change-font text-4xl">jkdjkdkj</span><i class="fal fa-info-circle fa-lg p-1 ml-1"></i></div>
+                    </a>
                 </nav>
                 <nav class="flex flex-row justify-center py-8">
-                    <a><div class="color-primary-100 hover:border"><i class="fab fa-facebook fa-md mx-4 my-2"></i></div></a>
-                    <a><div class="color-primary-100 hover:border"><i class="fab fa-twitter fa-md mx-4 my-2"></i></div></a>
-                    <a><div class="color-primary-100 hover:border"><i class="fab fa-youtube fa-md mx-4 my-2"></i></div></a>
-                    <a><div class="color-primary-100 hover:border"><i class="fab fa-instagram fa-md mx-4 my-2"></i></div></a>
-                    <a><div class="color-primary-100 hover:border"><i class="fab fa-tiktok fa-md mx-4 my-2"></i></div></a>
+                    <a>
+                        <div class="color-primary-100 border-transparent border hover:border-white"><i class="fab fa-facebook fa-md mx-4 my-2"></i></div>
+                    </a>
+                    <a>
+                        <div class="color-primary-100 border-transparent border hover:border-white"><i class="fab fa-twitter fa-md mx-4 my-2"></i></div>
+                    </a>
+                    <a>
+                        <div class="color-primary-100 border-transparent border hover:border-white"><i class="fab fa-youtube fa-md mx-4 my-2"></i></div>
+                    </a>
+                    <a>
+                        <div class="color-primary-100 border-transparent border hover:border-white"><i class="fab fa-instagram fa-md mx-4 my-2"></i></div>
+                    </a>
+                    <a>
+                        <div class="color-primary-100 border-transparent border hover:border-white"><i class="fab fa-tiktok fa-md mx-4 my-2"></i></div>
+                    </a>
                 </nav>
             </div>
         </nav>

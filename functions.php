@@ -1,5 +1,7 @@
 <?php
 require __DIR__ . '/includes/CustomMenuWalker.php';
+require get_stylesheet_directory() . '/includes/preloader-customizer.php';
+new Preloader_Customizer();
 
 function foam_theme_assets()
 {
@@ -36,3 +38,5 @@ add_theme_support('post-thumbnails');
 add_image_size('smallest', 300, 300, true);
 
 add_action('after_setup_theme', 'theme_custom_logo');
+
+

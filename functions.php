@@ -1,6 +1,11 @@
 <?php
 require __DIR__ . '/includes/CustomMenuWalker.php';
 
+// Customizer Settings
+require get_stylesheet_directory() . '/includes/theminimalist-customizer.php';
+new TheMinimalist_Customizer();
+
+
 function foam_theme_assets()
 {
     wp_enqueue_style('style', get_template_directory_uri() . '/css/main-theme.css');
@@ -36,3 +41,5 @@ add_theme_support('post-thumbnails');
 add_image_size('smallest', 300, 300, true);
 
 add_action('after_setup_theme', 'theme_custom_logo');
+
+

@@ -8,7 +8,7 @@ if (have_posts()) :
 
         <!-- the body -->
         <a href="<?php the_permalink() ?>">
-            <section class="bg-primary text-white">
+            <section class="bg-primary-0 text-white">
                 <div class="container mx-auto text-white">
                     <?php if (has_post_thumbnail()) : ?>
                         <figure class="flex justify-end">
@@ -22,7 +22,6 @@ if (have_posts()) :
             </section>
         </a>
 
-
 <?php endwhile;
 
 else :
@@ -31,6 +30,23 @@ else :
 endif;
 
 
+if (get_theme_mod('basic-author-callout-display') == 'Yes') { ?>
+    <div class="row row-padding author text-white">
+        <div class="col-6 author-image">
+            <img src="<?php echo wp_get_attachment_url(get_theme_mod('basic-author-callout-image')) ?>" alt="Author Image">
+        </div>
+        <div class="col-6 author-content">
+            <?php
+            $authorText = get_theme_mod('basic-author-callout-text');
+            if ($authorText != '') {
+                echo wpautop($authorText);
+            } else {
+                echo "Edit this by going to your Dashboard -> Appearance -> Customise -> Author Editor";
+            }
+            ?>
+        </div>
+    </div>
+<?php } 
 
 
 get_footer();

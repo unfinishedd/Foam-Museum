@@ -16,6 +16,7 @@ function foam_init_theme()
 {
     register_nav_menu('main-menu',  __('Hoofdmenu'));
     register_nav_menu('sub-menu',  __('Sub-Menu'));
+    register_nav_menu('socials-menu',  __('Socials-Menu'));
 }
 
 add_action('init', 'foam_init_theme');

@@ -22,7 +22,6 @@
                 $Text_5 = get_theme_mod('basic-preloader-callout-text-5');
                 
 
-                echo $Text_2;
                 if ($Text_1 != '') {
                     echo "<i class='font-primary-normal opacity-0 color-primary-100' id='photography'>" . $Text_1 . "</i> ";
                     if ($Text_2 != '') {
@@ -44,15 +43,6 @@
             </div>
         </div>
     <?php } ?>
-    <!-- <div class="h-screen w-full flex flex-col justify-center absolute z-40 bg-primary-0" id="loadingDiv">
-        <div class="relative mx-auto sm:text-6xl lg:text-5xl" id="textDiv">
-            <i class="font-primary-normal opacity-0 color-primary-100" id="photography">photography,</i>
-            <i class="font-primary-normal opacity-0 color-primary-100" id="learn">learn</i>
-            <i class="font-primary-normal opacity-0 color-primary-100" id="all">all</i>
-            <i class="font-primary-normal opacity-0 color-primary-100" id="about">about</i>
-            <i class="font-primary-normal opacity-0 color-primary-100" id="it">it</i>
-        </div>
-    </div> -->
     <div class="sticky top-0">
         <nav class="bg-primary-200 lg:h-fit p-2 lg:max-w-lg lg:mx-auto max-w-full py-3 mx-4 mt-4 lg:mt-0" id="main-menu">
             <div class="flex flex-row">
@@ -75,36 +65,10 @@
                 <div class="flex flex-row justify-center">
                     <div class="border rounded-full hover:rounded-none my-4 px-4 py-1 text-sm font-primary-normal color-primary-100">open vandaag 10:00-17:00</div>
                 </div>
-                <nav class="mx-6 py-12">
-                    <a>
-                        <div class="color-primary-100 my-4"><span class="menu-change-font text-4xl">programma</span><i class="fal fa-info-circle fa-lg p-1 ml-1"></i></div>
-                    </a>
-                    <a>
-                        <div class="color-primary-100 my-4"><span class="menu-change-font text-4xl">tebjdsfudius</span><i class="fal fa-info-circle fa-lg p-1 ml-1"></i></div>
-                    </a>
-                    <a>
-                        <div class="color-primary-100 my-4"><span class="menu-change-font text-4xl">jkdjkdkj</span><i class="fal fa-info-circle fa-lg p-1 ml-1"></i></div>
-                    </a>
-                </nav>
-                <nav class="flex flex-row justify-center py-8">
-                    <a>
-                        <div class="color-primary-100 border-transparent border hover:border-white"><i class="fab fa-facebook fa-md mx-4 my-2"></i></div>
-                    </a>
-                    <a>
-                        <div class="color-primary-100 border-transparent border hover:border-white"><i class="fab fa-twitter fa-md mx-4 my-2"></i></div>
-                    </a>
-                    <a>
-                        <div class="color-primary-100 border-transparent border hover:border-white"><i class="fab fa-youtube fa-md mx-4 my-2"></i></div>
-                    </a>
-                    <a>
-                        <div class="color-primary-100 border-transparent border hover:border-white"><i class="fab fa-instagram fa-md mx-4 my-2"></i></div>
-                    </a>
-                    <a>
-                        <div class="color-primary-100 border-transparent border hover:border-white"><i class="fab fa-tiktok fa-md mx-4 my-2"></i></div>
-                    </a>
-                </nav>
+                <?php wp_nav_menu(array('theme_location' => 'sub-menu', 'menu_class' => 'mx-6 py-4', 'walker' => new CustomMenuWalker_2(), 'items_wrap' => '<nav id="%1$s" class="%2$s">%3$s</nav>')); ?>
+                <?php wp_nav_menu(array('theme_location' => 'main-menu', 'menu_class' => 'mx-6 py-2', 'walker' => new CustomMenuWalker_2(), 'items_wrap' => '<nav id="%1$s" class="%2$s">%3$s</nav>')); ?>
+                <?php wp_nav_menu(array('theme_location' => 'socials-menu', 'menu_class' => 'flex flex-row justify-center py-8', 'walker' => new CustomMenuSocials(), 'items_wrap' => '<nav id="%1$s" class="%2$s">%3$s</nav>')); ?>
             </div>
         </nav>
-        <?php wp_nav_menu(array('theme_location' => 'sub-menu', 'menu_class' => 'flex flex-row pt-1 lg:max-w-lg lg:mx-auto max-w-full mx-4 lg:mt-0 color-primary-100', 'walker' => new CustomMenuWalker(), 'items_wrap' => '<nav id="%1$s" class="%2$s">%3$s</nav>')); ?>
+        <?php wp_nav_menu(array('theme_location' => 'sub-menu', 'menu_class' => 'flex flex-row pt-1 lg:max-w-lg lg:mx-auto max-w-full mx-4 lg:mt-0 color-primary-0', 'walker' => new CustomMenuWalker(), 'items_wrap' => '<nav id="%1$s" class="%2$s">%3$s</nav>')); ?>
     </div>
-    <?php wp_nav_menu(array('theme_location' => 'Hoofdmenu', 'menu_class' => 'flex-row-reverse')); ?>

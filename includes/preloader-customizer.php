@@ -112,20 +112,5 @@ class Preloader_Customizer {
             'settings' => 'basic-preloader-callout-text-5',
             'type' => 'text'
         )));
-         
-        $wp_customize->add_setting('basic-preloader-callout-image', array(
-            'default' => '',
-            'type' => 'theme_mod',
-            'capability' => 'edit_theme_options',
-            'sanitize_callback' => array( $this, 'sanitize_custom_url' )
-        ));
-    
-        $wp_customize->add_control(new WP_Customize_Cropped_Image_Control($wp_customize, 'basic-preloader-callout-image-control', array(
-            'label' => 'Image',
-            'section' => 'basic-preloader-callout-section',
-            'settings' => 'basic-preloader-callout-image',
-            'width' => 442,
-            'height' => 310
-        )));
     }
 }

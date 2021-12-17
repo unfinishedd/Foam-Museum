@@ -11,7 +11,7 @@ if (have_posts()) :
             <section class="bg-primary text-white">
                 <div class="container mx-auto text-white">
                     <?php if (has_post_thumbnail()) : ?>
-                        <figure class="w-full flex justify-end">
+                        <figure class="flex justify-end">
                             <img class="img-small text-white" src="<?php the_post_thumbnail_url('smallest'); ?>" />
                         </figure>
                     <?php endif ?>

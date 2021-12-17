@@ -1,5 +1,5 @@
 <?php
-class TheMinimalist_Customizer {
+class TheMinimalist_Customizer2 {
 	public function __construct() {
 		add_action( 'customize_register', array( $this, 'register_customize_sections' ) );
 	}

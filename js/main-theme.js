@@ -24,8 +24,20 @@ $(window).on("load", function () {
       $("#loadingDiv").remove();
       $("html").removeClass("overflow-hidden");
     });
+    customImage(1000);
+  }
+  
+
+  // Custom Image Loader - Top
+  function customImage(tijd) {
+    $("html").removeClass("overflow-hidden");
+    setTimeout(function () {
+      $("#yes").removeClass("transform -translate-x-full");
+    }, tijd);
   }
 
+
+  // something something
   jQuery.fn.idToggle = function (a, b) {
     function cb() {
       [b, a][(this._tog ^= 1)].call(this);
@@ -33,15 +45,20 @@ $(window).on("load", function () {
     return this.on("click", cb);
   };
 
-  $("#menu-button").on('click', '#menu-icon-open', function() {
+  $("#menu-button").on("click", "#menu-icon-open", function () {
     $(this).attr("id", "menu-icon-close");
   });
 
-  $("#menu-button").on('click', '#menu-icon-close', function() {
+  $("#menu-button").on("click", "#menu-icon-close", function () {
     $(this).attr("id", "menu-icon-open");
   });
-  // Start PreLoader
-  preLoader();
+
+  if( $("#loadingDiv").length ){
+    // Start PreLoader
+    preLoader();
+  } else {
+    customImage(1000);
+  }
 });
 
 // Menu Functions

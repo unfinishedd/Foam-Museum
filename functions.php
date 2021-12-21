@@ -1,11 +1,16 @@
 <?php
 require __DIR__ . '/includes/CustomMenuWalker.php';
+
+// Customizer Settings
 require get_stylesheet_directory() . '/includes/preloader-customizer.php';
 new Preloader_Customizer();
 
 // Customizer Settings
 require get_stylesheet_directory() . '/includes/theminimalist-customizer2.php';
 new TheMinimalist_Customizer2();
+
+require get_stylesheet_directory() . '/includes/customImage_Customizer.php';
+new customImage_Customizer();
 
 
 function foam_theme_assets()

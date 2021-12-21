@@ -1,7 +1,27 @@
 <?php get_header(); ?>
 
 <!-- dit is een test -->
+
+
+
+
+<!-- <div class="duration-700 transform -translate-x-full" id="yes">
+    <img src="images/MicrosoftTeams-image (3).png" alt="Foam image">
+</div> -->
+
+
+<?php if (get_theme_mod('basic-customImage-callout-display') == 'Yes') { ?>
+    <div class="justify-items-start absolute">
+            <div class="duration-700 transform -translate-x-full" id="yes">
+                <img src="<?php echo wp_get_attachment_url(get_theme_mod('basic-customImage-callout-image')) ?>" alt="Custom Image">
+            </div>
+    </div>
+<?php } ?>
+
+
+
 <?php
+
 
 if (have_posts()) :
     while (have_posts()) : the_post(); ?>
@@ -22,7 +42,7 @@ if (have_posts()) :
             </section>
         </a>
 
-<?php endwhile;
+    <?php endwhile;
 
 else :
     echo '<p>There are no posts!</p>';
@@ -31,7 +51,7 @@ endif;
 
 
 if (get_theme_mod('basic-author-callout-display') == 'Yes') { ?>
-    <div class="row row-padding author text-white">
+    <div class="row row-padding author">
         <div class="col-6 author-image">
             <img src="<?php echo wp_get_attachment_url(get_theme_mod('basic-author-callout-image')) ?>" alt="Author Image">
         </div>
@@ -46,8 +66,10 @@ if (get_theme_mod('basic-author-callout-display') == 'Yes') { ?>
             ?>
         </div>
     </div>
-<?php } 
+<?php } ?>
 
+
+<?php
 
 get_footer();
 

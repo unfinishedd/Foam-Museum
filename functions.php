@@ -4,7 +4,7 @@ require get_stylesheet_directory() . '/includes/preloader-customizer.php';
 new Preloader_Customizer();
 
 // Customizer Settings
-require get_stylesheet_directory() . 'wp-content\themes\foam-theme\includes\theminimalist-customizer2.php';
+require get_stylesheet_directory() . '/includes/theminimalist-customizer2.php';
 new TheMinimalist_Customizer2();
 
 

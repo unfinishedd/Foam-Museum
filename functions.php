@@ -5,7 +5,6 @@ require __DIR__ . '/includes/CustomMenuWalker.php';
 require get_stylesheet_directory() . '/includes/preloader-customizer.php';
 new Preloader_Customizer();
 
-// Customizer Settings
 require get_stylesheet_directory() . '/includes/theminimalist-customizer2.php';
 new TheMinimalist_Customizer2();
 
@@ -49,5 +48,3 @@ add_theme_support('post-thumbnails');
 add_image_size('smallest', 300, 300, true);
 
 add_action('after_setup_theme', 'theme_custom_logo');
-
-

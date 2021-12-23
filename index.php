@@ -12,9 +12,9 @@
 
 <?php if (get_theme_mod('basic-customImage-callout-display') == 'Yes') { ?>
     <div class="justify-items-start absolute">
-            <div class="duration-700 transform -translate-x-full" id="yes">
-                <img src="<?php echo wp_get_attachment_url(get_theme_mod('basic-customImage-callout-image')) ?>" alt="Custom Image">
-            </div>
+        <div class="duration-700 transform -translate-x-full" id="yes">
+            <img class="transition transform hover: motion-reduce:transition-none motion-reduce:transform-none hover:scale-110 z-10" src="<?php echo wp_get_attachment_url(get_theme_mod('basic-customImage-callout-image')) ?>" alt="Custom Image">
+        </div>
     </div>
 <?php } ?>
 
@@ -32,7 +32,7 @@ if (have_posts()) :
                 <div class="container mx-auto text-white">
                     <?php if (has_post_thumbnail()) : ?>
                         <figure class="flex justify-end">
-                            <img class="img-small text-white" src="<?php the_post_thumbnail_url('smallest'); ?>" />
+                            <img class="img-small transition transform hover: motion-reduce:transition-none motion-reduce:transform-none hover:scale-110 z-0" src="<?php the_post_thumbnail_url('medium_large'); ?>" />
                         </figure>
                     <?php endif ?>
                     <h2 class="text-white"><?php the_title() ?></h2>
@@ -42,13 +42,30 @@ if (have_posts()) :
             </section>
         </a>
 
-    <?php endwhile;
+<?php endwhile;
 
 else :
     echo '<p>There are no posts!</p>';
 
 endif;
 
+?>
+
+
+
+
+<section class="bg-primary-100 color-primary-0">
+    <div>
+        <h1>YES</h1>
+    </div>
+</section>
+
+
+
+
+
+
+<?php
 
 if (get_theme_mod('basic-author-callout-display') == 'Yes') { ?>
     <div class="row row-padding author">

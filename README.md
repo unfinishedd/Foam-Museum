@@ -1,6 +1,6 @@
 </br>
 
-<p align="center"><img src="https://picter-assets.s3.eu-west-1.amazonaws.com/contest-websites/foam-talent-call-2021/Foam%202019%20logo%20def_V4_cmyk_red_payoff%402x.png" height="90" alt="Project Logo"></p>
+<p align="center"><img src="foamBusiness.png" height="111" alt="Project Logo"></p>
 <h3 style="color: white;"align="center">Foam Museum</h3>
 
 <p style="color: red;font-weight: bold" align="center" >unfinishedd <span style="color: black;">| </span><span style="color: white;"> kaansecen </span></p>
@@ -13,10 +13,6 @@
 
 </br>
 
----
-</br>
-<img src="screenshot.png" style="max-width:450px;display:block;margin-left:auto;margin-right:auto;" />
-</br>
 
 ---
 
@@ -27,6 +23,7 @@
 - [General info](#general-info)
 - [Technologies](#technologies-used)
 - [Features](#features)
+- [Wireframe](#wireframe)
 - [Project Status](#project-status)
 - [Contact](#contact)
 
@@ -49,13 +46,14 @@ _Coming soon..._
 
 _Project is created with:_
 
-- HTML
-- CSS
+- HTML5
+- CSS3
 - Javascript
 - PHP
 - SQL
 - Wordpress
 - Tailwind CSS
+- jQuery
 
 </br>
 
@@ -64,10 +62,23 @@ _Project is created with:_
 
 ## Features
 
-
 _List the ready features here:_
 
 - Coming soon...
+
+</br>
+
+---
+
+</br>
+
+## Wireframe
+_Project prototype:_
+
+</br>
+<img src="screenshot.png" style="display:block;margin-left:auto;margin-right:auto;" />
+</br>
+
 
 </br>
 
@@ -89,7 +100,7 @@ Project is: _in progress_. </br></br>
 
 ## Contact
 
-Created by [@unfinished](https://www.unfinishedd.nl) </br>
+Created by [@unfinishedd](https://www.unfinishedd.nl) </br>
 Created by [@kaansecen](https://www.kaansecen.nl)
 
 </br>

@@ -43,13 +43,8 @@
             </div>
         </div>
     <?php } ?>
-<<<<<<< HEAD
     <div class="sticky top-0 z-40">
-        <nav class="bg-primary-200 lg:h-fit p-2 lg:max-w-lg lg:mx-auto max-w-full py-3 mx-4 mt-4 lg:mt-0" id="main-menu">
-=======
-    <div class="sticky top-0">
-        <nav class="bg-primary-200 p-2 lg:max-w-lg lg:mx-auto max-w-full py-3 mx-4 mt-4 lg:mt-0 z-40" id="main-menu">
->>>>>>> kaan
+        <nav class="bg-primary-200 p-2 lg:max-w-lg lg:mx-auto max-w-full py-3 mx-4 mt-4 lg:mt-0" id="main-menu">
             <div class="flex flex-row">
                 <div class="flex-none color-primary-100"><button id="menu-button" class="transition transform hover: motion-reduce:transition-none motion-reduce:transform-none hover:scale-x-125"><i id="menu-icon-open" class="fal fa-grip-lines fa-lg"></i></button></div>
                 <div class="flex-grow">

@@ -12,7 +12,7 @@
 
 <body <?php body_class('bg-primary-0'); ?>>
     <?php if (get_theme_mod('basic-preloader-callout-display') == 'Yes') { ?>
-        <div class="h-screen w-full flex flex-col justify-center absolute z-40 bg-primary-0" id="loadingDiv">
+        <div class="h-screen w-full flex flex-col justify-center absolute z-50 bg-primary-0" id="loadingDiv">
             <div class="relative mx-auto sm:text-6xl lg:text-5xl" id="textDiv">
                 <?php
                 $Text_1 = get_theme_mod('basic-preloader-callout-text');
@@ -43,7 +43,7 @@
             </div>
         </div>
     <?php } ?>
-    <div class="sticky top-0">
+    <div class="sticky top-0 z-40">
         <nav class="bg-primary-200 lg:h-fit p-2 lg:max-w-lg lg:mx-auto max-w-full py-3 mx-4 mt-4 lg:mt-0" id="main-menu">
             <div class="flex flex-row">
                 <div class="flex-none color-primary-100"><button id="menu-button" class="transition transform hover: motion-reduce:transition-none motion-reduce:transform-none hover:scale-x-125"><i id="menu-icon-open" class="fal fa-grip-lines fa-lg"></i></button></div>

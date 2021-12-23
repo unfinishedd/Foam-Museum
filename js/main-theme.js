@@ -26,7 +26,6 @@ $(window).on("load", function () {
     });
     customImage(1000);
   }
-  
 
   // Custom Image Loader - Top
   function customImage(tijd) {
@@ -36,24 +35,54 @@ $(window).on("load", function () {
     }, tijd);
   }
 
-
-  // something something
-  jQuery.fn.idToggle = function (a, b) {
-    function cb() {
-      [b, a][(this._tog ^= 1)].call(this);
-    }
-    return this.on("click", cb);
-  };
-
+  // Menu open function
   $("#menu-button").on("click", "#menu-icon-open", function () {
+    // Fade Out bottom sub menu
+    $("#sub-menu-3").fadeOut(350);
+
+    // Show time menu
+    $("#time-menu").removeClass("hidden");
+
+    // Show socials menu with delay
+    setTimeout(function () {
+      $("#socials-menu-1").removeClass("hidden");
+    }, 500);
+
+    // Fade in text for both
+    $("#sub-menu-1").fadeIn(1500);
+    $("#sub-menu-2").fadeIn(1500);
+
+    // Change height in menu
+    $("#menu-open").removeClass("h-0");
+    $("#menu-open").addClass("h-[32rem]");
+    // Change id of the icon
     $(this).attr("id", "menu-icon-close");
   });
 
+  // Menu close function
   $("#menu-button").on("click", "#menu-icon-close", function () {
+    // Fade in bottom sub menu
+    $("#sub-menu-3").fadeIn(350);
+
+    // Hide socials menu
+    $("#socials-menu-1").addClass("hidden");
+
+    // Fade out text for both
+    $("#sub-menu-1").fadeOut(200);
+    $("#sub-menu-2").fadeOut(200);
+
+    // Hide time menu
+    $("#time-menu").addClass("hidden");
+
+    // Change height in menu
+    $("#menu-open").addClass("h-0");
+    $("#menu-open").removeClass("h-[32rem]");
+
+    // Change id of the icon
     $(this).attr("id", "menu-icon-open");
   });
 
-  if( $("#loadingDiv").length ){
+  if ($("#loadingDiv").length) {
     // Start PreLoader
     preLoader();
   } else {

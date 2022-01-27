@@ -1,0 +1,26 @@
+@import "fonts";
+@import "themecolors";
+
+::placeholder {
+  color: $primary-0;
+  opacity: 1;
+  font-family: $font-family-primary;
+  font-weight: normal;
+  font-style: normal;
+}
+
+:-ms-input-placeholder {
+  color: $primary-0;
+  opacity: 1;
+  font-family: $font-family-primary;
+  font-weight: normal;
+  font-style: normal;
+}
+
+::-ms-input-placeholder {
+  color: $primary-0;
+  opacity: 1;
+  font-family: $font-family-primary;
+  font-weight: normal;
+  font-style: normal;
+}

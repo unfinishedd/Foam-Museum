@@ -1,4 +1,7 @@
 <?php get_header(); ?>
+<div class="min-h-screen flex flex-col justify-between">
+<main>
+    <!-- dit is een test -->
 
 
 
@@ -8,16 +11,15 @@
         <div class="duration-700 transform -translate-x-full" id="yes">
             <img class="mt-52 ml-20 z-20" src="<?php echo wp_get_attachment_url(get_theme_mod('basic-customImage-callout-image')) ?>" alt="Custom Image">
         </div>
-    </div>
-<?php } ?>
+    <?php } ?>
 
 
 
-<?php
+    <?php
 
 
-if (have_posts()) :
-    while (have_posts()) : the_post(); ?>
+    if (have_posts()) :
+        while (have_posts()) : the_post(); ?>
 
         <!-- the body -->
         <a href="<?php the_permalink() ?>">
@@ -37,12 +39,12 @@ if (have_posts()) :
 
 <?php endwhile;
 
-else :
-    echo '<p>There are no posts!</p>';
+    else :
+        echo '<p>There are no posts!</p>';
 
-endif;
+    endif;
 
-?>
+    ?>
 
 
 <!-- Lines -->
@@ -134,7 +136,7 @@ endif;
 </div> -->
 
 
-<?php
+    <?php
 
 if (get_theme_mod('basic-author-callout-display') == 'Yes') { ?>
     <!-- <div> 

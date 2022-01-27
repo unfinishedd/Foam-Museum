@@ -1,94 +1,86 @@
 <?php get_header(); ?>
-
-<!-- dit is een test -->
-
-
-
-
-<!-- <div class="duration-700 transform -translate-x-full" id="yes">
-    <img src="images/MicrosoftTeams-image (3).png" alt="Foam image">
-</div> -->
+<div class="min-h-screen flex flex-col justify-between">
+<main>
+    <!-- dit is een test -->
 
 
-<?php if (get_theme_mod('basic-customImage-callout-display') == 'Yes') { ?>
-    <div class="justify-items-start absolute">
-        <div class="duration-700 transform -translate-x-full" id="yes">
-            <img class="transition transform hover: motion-reduce:transition-none motion-reduce:transform-none hover:scale-110 z-10" src="<?php echo wp_get_attachment_url(get_theme_mod('basic-customImage-callout-image')) ?>" alt="Custom Image">
+
+
+    <!-- <div class="duration-700 transform -translate-x-full" id="yes">
+        <img src="images/MicrosoftTeams-image (3).png" alt="Foam image">
+    </div> -->
+
+
+    <?php if (get_theme_mod('basic-customImage-callout-display') == 'Yes') { ?>
+        <div class="justify-items-start absolute">
+            <div class="duration-700 transform -translate-x-full" id="yes">
+                <img class="transition transform hover: motion-reduce:transition-none motion-reduce:transform-none hover:scale-110 z-10" src="<?php echo wp_get_attachment_url(get_theme_mod('basic-customImage-callout-image')) ?>" alt="Custom Image">
+            </div>
         </div>
-    </div>
-<?php } ?>
+    <?php } ?>
 
 
 
-<?php
+    <?php
 
 
-if (have_posts()) :
-    while (have_posts()) : the_post(); ?>
+    if (have_posts()) :
+        while (have_posts()) : the_post(); ?>
 
-        <!-- the body -->
-        <a href="<?php the_permalink() ?>">
-            <section class="bg-primary-0 text-white">
-                <div class="container mx-auto text-white">
-                    <?php if (has_post_thumbnail()) : ?>
-                        <figure class="flex justify-end">
-                            <img class="img-small transition transform hover: motion-reduce:transition-none motion-reduce:transform-none hover:scale-110 z-0" src="<?php the_post_thumbnail_url('medium_large'); ?>" />
-                        </figure>
-                    <?php endif ?>
-                    <h2 class="text-white"><?php the_title() ?></h2>
-                    <?php the_content() ?>
-                    <hr>
-                </div>
-            </section>
-        </a>
+            <!-- the body -->
+            <a href="<?php the_permalink() ?>">
+                <section class="bg-primary-0 text-white">
+                    <div class="container mx-auto text-white">
+                        <?php if (has_post_thumbnail()) : ?>
+                            <figure class="flex justify-end">
+                                <img class="img-small transition transform hover: motion-reduce:transition-none motion-reduce:transform-none hover:scale-110 z-0" src="<?php the_post_thumbnail_url('medium_large'); ?>" />
+                            </figure>
+                        <?php endif ?>
+                        <h2 class="text-white"><?php the_title() ?></h2>
+                        <?php the_content() ?>
+                        <hr>
+                    </div>
+                </section>
+            </a>
 
-<?php endwhile;
+    <?php endwhile;
 
-else :
-    echo '<p>There are no posts!</p>';
+    else :
+        echo '<p>There are no posts!</p>';
 
-endif;
+    endif;
 
-?>
-
-
-
-
-<section class="bg-primary-100 color-primary-0">
-    <div>
-        <h1>YES</h1>
-    </div>
-</section>
+    ?>
 
 
 
 
 
 
-<?php
 
-if (get_theme_mod('basic-author-callout-display') == 'Yes') { ?>
-    <div class="row row-padding author">
-        <div class="col-6 author-image">
-            <img src="<?php echo wp_get_attachment_url(get_theme_mod('basic-author-callout-image')) ?>" alt="Author Image">
+
+
+
+    <?php
+
+    if (get_theme_mod('basic-author-callout-display') == 'Yes') { ?>
+        <div class="row row-padding author">
+            <div class="col-6 author-image">
+                <img src="<?php echo wp_get_attachment_url(get_theme_mod('basic-author-callout-image')) ?>" alt="Author Image">
+            </div>
+            <div class="col-6 author-content">
+                <?php
+                $authorText = get_theme_mod('basic-author-callout-text');
+                if ($authorText != '') {
+                    echo wpautop($authorText);
+                } else {
+                    echo "Edit this by going to your Dashboard -> Appearance -> Customise -> Author Editor";
+                }
+                ?>
+            </div>
         </div>
-        <div class="col-6 author-content">
-            <?php
-            $authorText = get_theme_mod('basic-author-callout-text');
-            if ($authorText != '') {
-                echo wpautop($authorText);
-            } else {
-                echo "Edit this by going to your Dashboard -> Appearance -> Customise -> Author Editor";
-            }
-            ?>
-        </div>
-    </div>
-<?php } ?>
+    <?php } ?>
 
+</main>
 
-<?php
-
-get_footer();
-
-?>
 <?php get_footer(); ?>

@@ -6,7 +6,7 @@
 <?php if (get_theme_mod('basic-customImage-callout-display') == 'Yes') { ?>
     <div class="justify-items-start absolute">
         <div class="duration-700 transform -translate-x-full" id="yes">
-            <img class="z-20 mt-52 ml-20" src="<?php echo wp_get_attachment_url(get_theme_mod('basic-customImage-callout-image')) ?>" alt="Custom Image">
+            <img class="mt-52 ml-20 z-20" src="<?php echo wp_get_attachment_url(get_theme_mod('basic-customImage-callout-image')) ?>" alt="Custom Image">
         </div>
     </div>
 <?php } ?>
@@ -25,7 +25,7 @@ if (have_posts()) :
                 <div class="container mx-auto text-white">
                     <?php if (has_post_thumbnail()) : ?>
                         <figure class="flex justify-end">
-                            <img class="img-small z-10" src="<?php the_post_thumbnail_url('large'); ?>" />
+                            <img class="img-small z-auto" style="right: 0;" src="<?php the_post_thumbnail_url('large'); ?>" />
                         </figure>
                     <?php endif ?>
 

@@ -91,6 +91,35 @@ class CustomMenuWalker_2 extends Walker_Nav_Menu
 	}
 }
 
+class CustomMenuWalker_3 extends Walker_Nav_Menu
+{
+    private $item_number = 0;
+    
+    function start_el(&$output, $item, $depth = 0, $args = [], $id = 0)
+
+    {
+        $this->item_number++;
+
+        
+        $output .= '<a href="' . $item->url . '" class="my-3 block">';
+
+
+        $output .= $item->title;
+
+    }
+
+    public function end_el( &$output, $item, $depth = 0, $args = null ) {
+		if ( isset( $args->item_spacing ) && 'discard' === $args->item_spacing ) {
+			$t = '';
+			$n = '';
+		} else {
+			$t = "\t";
+			$n = "\n";
+		}
+		$output .= "</a>{$n}";
+	}
+}
+
 class CustomMenuSocials extends Walker_Nav_Menu
 {
     private $item_number = 0;

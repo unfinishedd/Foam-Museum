@@ -5,11 +5,10 @@
 
 
 
-
         <?php if (get_theme_mod('basic-customImage-callout-display') == 'Yes') { ?>
-            <div class="justify-items-start absolute">
+            <div class="justify-items-start">
                 <div class="duration-700 transform -translate-x-full" id="yes">
-                    <img class="mt-52 ml-20 z-20" src="<?php echo wp_get_attachment_url(get_theme_mod('basic-customImage-callout-image')) ?>" alt="Custom Image">
+                    <img class="pt-52 pl-20 z-20 absolute" src="<?php echo wp_get_attachment_url(get_theme_mod('basic-customImage-callout-image')) ?>" alt="Custom Image">
                 </div>
             <?php } ?>
 
@@ -27,7 +26,7 @@
                             <div class="container mx-auto text-white">
                                 <?php if (has_post_thumbnail()) : ?>
                                     <figure class="flex justify-end">
-                                        <img class="img-small z-auto" style="right: 0;" src="<?php the_post_thumbnail_url('large'); ?>" />
+                                        <img class="z-auto" src="<?php the_post_thumbnail_url('large'); ?>" />
                                     </figure>
                                 <?php endif ?>
 
@@ -51,23 +50,24 @@
             <div class="redlight">
                 <style>
                     .redlight {
+                        position: absolute;
                         z-index: 0;
                         bottom: -220px;
                         width: 100%;
                     }
 
-                    /* @media screen and (max-width: 600px) {
-            .redlight {
-                display: none;
-            }
-        } */
+                    @media screen and (max-width: 600px) {
+                        .redlight {
+                            display: none;
+                        }
+                    }
 
+                    ;
                 </style>
                 <svg id="Laag_1" data-name="Laag 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250 22.65">
                     <defs>
                         <style>
                             .cls-1 {
-                                position: absolute;
                                 fill: none;
                                 stroke: red;
                                 stroke-miterlimit: 10;
@@ -84,13 +84,14 @@
             <div class="redlight-vertical">
                 <style>
                     .redlight-vertical {
+                        position: absolute;
                         z-index: 1;
                         right: 150px;
                         max-width: 140px;
                     }
 
                     @media screen and (max-width: 900px) {
-                        .redlight {
+                        .redlight-vertical {
                             display: none;
                         }
                     }
@@ -101,7 +102,6 @@
                     <defs>
                         <style>
                             .cls-1 {
-                                position: absolute;
                                 fill: none;
                                 stroke: #e52421;
                                 stroke-miterlimit: 10;
@@ -120,14 +120,44 @@
 
 
             <!-- Content Post -->
-            <section class="bg-primary-100 color-primary-0 z-0" style="margin-top: auto" ;>
-                <div>
-                    <h1 style="font-size: 77px;"> <?php the_title() ?> </h1>
-                    <h2 style="font-size: 20px;"> <?php the_content() ?> </h2>
+            <section class="bg-primary-100 color-primary-0" style="margin-top: auto" ;>
+                <div class="py-5">
+                    <div class="float-child">
+                        <h1 style="font-size: 77px;"> <?php the_title() ?> </h1>
+                        <h2 style="font-size: 20px;"> <?php the_content() ?> </h2>
+                    </div>
                 </div>
+                <div class="py-5">
+                    <div class="float-child2">
+                        <div class="rcorners2">
+                            <h2 style="font-size: 20px;"> welcome </h2>
+                        </div>
+                    </div>
             </section>
+            <style>
+                .float-child {
+                    width: 50%;
+                    padding: 5px;
+                    left: 0px;
+                }
+
+                .float-child2 {
+                    width: 50%;
+                    right: 0px;
+                }
+
+                .rcorners2 {
+                    border-radius: 25px;
+                    border: 2px solid black;
+                    padding: 20px;
+                    width: 200px;
+                    height: 150px;
+                }
+            </style>
+
 
     </main>
+
 
     <?php
 

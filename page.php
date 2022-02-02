@@ -49,21 +49,14 @@ if (strpos(get_permalink(get_page_by_path('')), 'contact') !== false) {
 
 
 <?php
-
-
-if (have_posts()) :
-    while (have_posts()) : the_post(); ?>
-        <!-- the body -->
-
-
-<?php endwhile;
-
-else :
-    echo '<p>There are no posts!</p>';
-
-endif;
-
+$ids = get_field('gallery');
+if (!empty($ids)) {
+    foreach ($ids as $image_id) {
+        echo wp_get_attachment_image($image_id, 'thumbnail');
+    }
+}
 ?>
+
 
 
 <!-- redlight horizontal -->

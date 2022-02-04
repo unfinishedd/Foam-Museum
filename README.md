@@ -35,11 +35,22 @@
 
 ## General info
 
-_Coming soon..._
+### Company outing at Foam: Photography course
+_
+Experience a fun and educational company outing. </br></br>
+Companies are invited to come and do a photography workshop with us. </br>
+The workshop is given by a photographer who also exhibits in the museum. </br>
+You and your colleagues can put the photos on a shirt and/or have them printed to take with you. </br>
+
+During the workshop you will receive a 20-minute explanation about the art of photography in a group of maximum 15 people. </br>
+Then you get to work yourself. You can choose from 3 photos that hang in the museum. We have cameras and other supplies ready.</br>
+
+_
 
 </br>
 
 ---
+
 </br>
 
 ## Technologies Used
@@ -52,19 +63,26 @@ _Project is created with:_
 - PHP
 - SQL
 - Wordpress
+- Woocommerce
 - Tailwind CSS
 - jQuery
 
 </br>
 
 ---
+
 </br>
 
 ## Features
 
 _List the ready features here:_
 
-- Coming soon...
+- Preloader customisation
+- Product customisation
+- Page customisation
+- Post customisation
+- Gallery image uploader
+
 
 </br>
 
@@ -88,9 +106,14 @@ _Project prototype:_
 
 ## Project Status
 
-Project is: _in progress_. </br></br>
-[![Website](https://img.shields.io/badge/-Website-2e343f?logo=google&logoColor=white&style=for-the-badge)](https://kaansecen.nl/wordpress/foam) </br></br>
+Project is: _Finished_. </br></br>
+[![Website](https://img.shields.io/badge/-Website-2e343f?logo=google&logoColor=white&style=for-the-badge)](https://unfinishedd.nl/foam) </br></br>
 [![Trello](https://img.shields.io/badge/-trello-2e343f?logo=Trello&logoColor=white&style=for-the-badge)](https://trello.com/b/fozAhvke/foam-e-commerce)
+
+[![Adobe XD Design](https://th.bing.com/th/id/R.eb6e5212ee99eb162faff403d683d33e?rik=iDNbFliOJtLN6Q&riu=http%3a%2f%2fwww.freelogovectors.net%2fwp-content%2fuploads%2f2020%2f07%2fAdobe-xd-logo.png&ehk=GvxPhLxqSPtjNxSdIgzhy68o%2f9nrOjnGumz14fNnfDo%3d&risl=&pid=ImgRaw&r=0)](https://xd.adobe.com/view/24b99b91-aec0-45a9-ae6a-a0eaa2ecd0bf-71ea/) </br></br>
+[![Adobe XD Research](https://th.bing.com/th/id/R.eb6e5212ee99eb162faff403d683d33e?rik=iDNbFliOJtLN6Q&riu=http%3a%2f%2fwww.freelogovectors.net%2fwp-content%2fuploads%2f2020%2f07%2fAdobe-xd-logo.png&ehk=GvxPhLxqSPtjNxSdIgzhy68o%2f9nrOjnGumz14fNnfDo%3d&risl=&pid=ImgRaw&r=0)](https://xd.adobe.com/view/518b3d36-8e27-478f-b6b3-132c57b7f892-04d8/) </br></br>
+[![Adobe XD Newsletter](https://th.bing.com/th/id/R.eb6e5212ee99eb162faff403d683d33e?rik=iDNbFliOJtLN6Q&riu=http%3a%2f%2fwww.freelogovectors.net%2fwp-content%2fuploads%2f2020%2f07%2fAdobe-xd-logo.png&ehk=GvxPhLxqSPtjNxSdIgzhy68o%2f9nrOjnGumz14fNnfDo%3d&risl=&pid=ImgRaw&r=0)](https://xd.adobe.com/view/24b99b91-aec0-45a9-ae6a-a0eaa2ecd0bf-71ea/) </br></br>
+
 
 </br>
 
@@ -112,4 +135,4 @@ Created by [@kaansecen](https://www.kaansecen.nl)
 
 </br>
 
-_This project is open source and available under the Foam trademark_.
+_This project is open source and available under the Foam Business trademark_.

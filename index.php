@@ -88,9 +88,10 @@
                         z-index: 1;
                         right: 150px;
                         max-width: 140px;
+                        max-height: 40px;
                     }
 
-                    @media screen and (max-width: 900px) {
+                    @media screen and (max-width: 1080px) {
                         .redlight-vertical {
                             display: none;
                         }
@@ -98,7 +99,7 @@
 
                     ;
                 </style>
-                <svg id="Laag_1" data-name="Laag 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18.25 250">
+                <svg id="Laag_1" data-name="Laag 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18.25 70">
                     <defs>
                         <style>
                             .cls-1 {
@@ -109,51 +110,25 @@
                             }
                         </style>
                     </defs>
-                    <line class="cls-1" x1="0.13" y1="250" x2="0.13" />
-                    <line class="cls-1" x1="6.12" y1="250" x2="6.12" />
-                    <line class="cls-1" x1="12.13" y1="250" x2="12.13" />
-                    <line class="cls-1" x1="18.13" y1="250" x2="18.13" />
+                    <line class="cls-1" x1="0.13" y1="70" x2="0.13" />
+                    <line class="cls-1" x1="6.12" y1="70" x2="6.12" />
+                    <line class="cls-1" x1="12.13" y1="70" x2="12.13" />
+                    <line class="cls-1" x1="18.13" y1="70" x2="18.13" />
                 </svg>
             </div>
 
 
 
-
-            <!-- Content Post -->
-            <section class="bg-primary-100 color-primary-0" style="margin-top: auto" ;>
-                <div class="py-5">
-                    <div class="float-child">
-                        <h1 style="font-size: 77px;"> <?php the_title() ?> </h1>
-                        <h2 style="font-size: 20px;"> <?php the_content() ?> </h2>
-                    </div>
-                </div>
-                <div class="py-5">
-                    <div class="float-child2">
-                        <div class="rcorners2">
-                            <h2 style="font-size: 20px;"> welcome </h2>
-                        </div>
-                    </div>
-            </section>
-            <style>
-                .float-child {
-                    width: 50%;
-                    padding: 5px;
-                    left: 0px;
+            <?php
+            $ids = get_field('gallery');
+            if (!empty($ids)) {
+                foreach ($ids as $image_id) {
+                    echo wp_get_attachment_image($image_id, 'thumbnail');
                 }
+            }
+            ?>
 
-                .float-child2 {
-                    width: 50%;
-                    right: 0px;
-                }
 
-                .rcorners2 {
-                    border-radius: 25px;
-                    border: 2px solid black;
-                    padding: 20px;
-                    width: 200px;
-                    height: 150px;
-                }
-            </style>
 
 
     </main>
@@ -178,9 +153,9 @@
                 ?>
             </div>
         </div>
-    </div>
-<?php } ?>-->
-        <!-- 
+    </div>-->
+    <?php } ?>
+    <!-- 
     <style>
         #ABC {
             background-color: blue;
@@ -197,8 +172,8 @@
         }
     </style> -->
 
-        <?php
+    <?php
 
-        get_footer();
+    get_footer();
 
-        ?>
+    ?>

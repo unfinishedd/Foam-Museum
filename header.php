@@ -43,7 +43,7 @@
             </div>
         </div>
     <?php } ?>
-    <div class="sticky absolute top-0 z-40 w-full">
+    <div class="fixed top-0 z-40 w-full">
         <nav class="bg-primary-200 p-2 lg:max-w-lg lg:mx-auto max-w-full py-3 mx-4 mt-4 lg:mt-0" id="main-menu">
             <div class="flex flex-row">
                 <div class="flex-none color-primary-100"><button id="menu-button" class="transition transform hover: motion-reduce:transition-none motion-reduce:transform-none hover:scale-x-125 w-4"><i id="menu-icon-open" class="fal fa-grip-lines fa-lg"></i></button></div>
